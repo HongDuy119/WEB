@@ -60,6 +60,7 @@ html {
     right: 0px;
     left: 0px;
     z-index: 1;
+    /* overflow: hidden; */
 }
 
 #nav {
@@ -121,8 +122,25 @@ html {
     font-size: 13px;
 }
 
+#header .mobile-menu-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
 #header .search-botton {
     float: right;
+    /* padding: 0 21px; */
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
 }
 
 #header .search-botton:hover {
@@ -130,6 +148,7 @@ html {
     cursor: pointer;
 }
 
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;
@@ -173,9 +192,12 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     margin-right: auto;
     margin-left: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -200,7 +222,7 @@ html {
 }
 
 #content .member-list {
-    margin-top: 47px;
+    margin-top: 32px;
     /* overflow: hidden; */
 }
 
@@ -259,7 +281,7 @@ html {
 }
 
 .place-list {
-    margin: 32px -8px 0;
+    margin: 16px -8px 0;
     /* padding-bottom: 500px; */
     padding-bottom: 48px;
     /* padding-top: 32px; */
@@ -267,7 +289,7 @@ html {
 
 .place-iteam {
     float: left;
-    width: 33.333333%;
+    width: 33.33333333%;
     padding: 0 8px;
 }
 
@@ -311,6 +333,7 @@ html {
     display: inline-block;
     margin-top: 15px;
     cursor: pointer;
+    text-align: center;
 }
 
 .place-buy:hover {
@@ -422,6 +445,15 @@ header.modal-header {
 .contact-info {
     font-size: 18px;
     line-height: 1.5;
+}
+
+.contact-info a {
+    color: #101acf;
+    opacity: 0.6;
+}
+
+.contact-info a:hover {
+    opacity: 1;
 }
 
 .contact-info i[class*="ti-"] {
